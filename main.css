@@ -160,16 +160,22 @@ body{
 }
 
 #expand{
+    z-index: -1;
+    opacity: 0;
     position: fixed;
     top: 30%;
     left: 20%;
     background-color: white;
     width:60%;
     height:50%;
+    transition: all 1s ease;
 }
 
-
-
+#eQuit{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
 
 
 
