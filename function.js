@@ -117,22 +117,24 @@ $(window).scroll(function(){
         $('#nav').css({
             'transform': 'translate(0px, 0px)'
         });
-    }
 
-    if(wScroll>=1250){
+    }else if(wScroll<2150){
          $('#nav').css({
             'transform': 'translate(-300px, 0px)'
         });
-    }
 
-    if(wScroll>=2150){
+    }else if(wScroll<2840){
         $('#nav').css({
             'transform': 'translate(-600px, 0px)'
         });
 
         if(pcreated===false) createProfiles(group);
-    }
-    if(wScroll>=2840){
+
+    }else if(wScroll>=2840){
+
+        $('#nav').css({
+            'transform': 'translate(-900px, 0px)'
+        });
         if(gcreated===false){
             createGraph();
         }
