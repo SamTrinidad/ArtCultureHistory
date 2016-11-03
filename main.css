@@ -10,12 +10,14 @@
     left: 47%;
     padding: 0;
     transition: all 1s ease;
+    margin: 0;
 }
 
 #nav li{
     display: inline-block;
     padding-right:  200px;
     width: 100px;
+    text-align: center;
 }
 
 #nav li a{
@@ -198,6 +200,6 @@ hr{
 
 /* Chapter 3*/
 
-#myChart{
+.graph{
     margin: auto;
 }
