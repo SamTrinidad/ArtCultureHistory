@@ -67,7 +67,7 @@ nav {
     top: 400px;
     position:relative;
     font-family: monospace;
-    text-align: center;
+    text-align: left;
     margin: auto;
     width:70%;
     font-size: 20px;
@@ -86,7 +86,7 @@ nav {
 
 body{
     margin: 0;
-    background-color: #7a5f30;
+    background-color: #996633;
 }
 
 hr{
@@ -114,6 +114,13 @@ hr{
     background-repeat: no-repeat;
     position: absolute;
     top:40%;
+}
+#tran{
+    height: 1100px;
+    width: 100%;
+    background-color: #996633;
+    position: absolute;
+    top:80%;
 }
 
 #pTemple{
@@ -171,7 +178,7 @@ hr{
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
-    height: 300px;
+    height: 500px;
     width: 100%;
 }
 
@@ -184,7 +191,7 @@ hr{
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
-    height: 400px;
+    height: 500px;
     width: 100%;
 }
 
@@ -220,8 +227,74 @@ hr{
 }
 
 
-/* Chapter 3*/
-
-.graph{
-    margin: auto;
+/*Displays*/
+button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 40%;
 }
+.close{
+    position:absolute;
+    top: 5px;
+    right: 5px;
+    padding:5px 5px;
+}
+
+/*Graph Displays*/
+.graphContainer{
+    position: fixed;
+    text-align: center;
+    background-color: white;
+    display: none;
+    top: 20%;
+    left: 35%;
+    border-radius: 20px;
+    z-index: 20;
+    box-shadow: 10px 10px rgba(0,0,0,0.5);
+}
+
+/*Image Displays*/
+.imgContainer{
+    position: fixed;
+    text-align: center;
+    width: 60%;
+    height: 70%;
+    background-color: white;
+    display: none;
+    top: 20%;
+    left: 20%;
+    border-radius: 20px;
+    z-index: 20;
+    box-shadow: 10px 10px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+.left{
+    position: inherit;
+    margin: auto;
+    top: 51%;
+    left: 16%;
+}
+.right{
+    position: inherit;
+    margin: auto;
+    top: 51%;
+    right: 16%;
+}
+.unselected{
+    display:none;
+    width: 100%;
+    height: 100%;
+}
+#selected{
+    display:block;
+}
+
+

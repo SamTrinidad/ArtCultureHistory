@@ -186,12 +186,16 @@ var Title = {
     root: $('#pRoot'),
     temple: $('#pTemple'),
     hill: $('#pHill'),
-    forest: $('pForest'),
+    forest: $('#pForest'),
+    tran: $('#tran'),
     transform: function(wScroll){
         this.logo.css({
             'transform' : 'translate(0px, '+ wScroll/3 +'%)'
         });
         this.root.css({
+            'transform' : 'translate(0px, '+ wScroll/60 +'%)'
+        });
+        this.tran.css({
             'transform' : 'translate(0px, '+ wScroll/60 +'%)'
         });
         this.temple.css({
@@ -228,14 +232,24 @@ var navigation = {
                 break;
             case 2:
                 this.nav.css({
-                    'transform': 'translate(-600px, 0px)'
+                    'transform': 'translate(-620px, 0px)'
                 });
                 break;
             case 3:
                 this.nav.css({
-                    'transform': 'translate(-900px, 0px)'
+                    'transform': 'translate(-950px, 0px)'
                 });
                 break;
+            case 4:
+            this.nav.css({
+                'transform': 'translate(-1250px, 0px)'
+            });
+                break;
+            case 5:
+            this.nav.css({
+                'transform': 'translate(-1560px, 0px)'
+            });
+            break;
             default:
                 break;
         }
@@ -247,35 +261,68 @@ var navigation = {
 $(window).scroll(function(){
 
     var wScroll = $(this).scrollTop();
+    var ch1 = $('#ch1').offset().top - 50;
+    var ch2 = $('#ch2').offset().top - 50;
+    var ch3 = $('#ch3').offset().top - 50;
+    var ch4 = $('#ch4').offset().top - 50;
+    var ch5 = $('#ch5').offset().top - 50;
 
-    if(wScroll<1200){
+    if(wScroll<ch1){
 
         Title.transform(wScroll);
         navigation.state = 0;
         navigation.transform();
 
-    }else if(wScroll<2145){
+    }else if(wScroll<ch2){
         navigation.state = 1;
         navigation.transform();
+        if(group.created===false) group.createProfiles();
 
-    }else if(wScroll<2840){
+    }else if(wScroll<ch3){
         navigation.state = 2;
         navigation.transform();
 
-        if(group.created===false) group.createProfiles();
-
-    }else if(wScroll<3800){
+    }else if(wScroll<ch4){
         navigation.state = 3;
         navigation.transform();
-        if(gcreated===false){
-            createpopGraph();
-        }
-    }else if(wScroll >= 3800){
-        if(acreated===false){
-            createeageGraph();
-        }
+
+    }else if(wScroll<ch5){
+        navigation.state = 4;
+        navigation.transform();
+
+     }else if(wScroll >= ch5){
+        navigation.state = 5;
+        navigation.transform();
     }
 
+});
+
+    
+$(window).ready(function(){
+    //Population graph display
+    $('#showPopGraph').on("click",function(){
+        $('#popGraphContainer').css('display','block');
+        if(gcreated === false){
+            createpopGraph();
+        }
+    });
+    
+    //image slides
+    $('.displayImage').on("click",function(){
+        this.parentNode.lastElementChild.style.display = "block";
+    });
+    $('.right').on("click",function(){
+        
+    });
+    $('.left').on("click",function(){
+        
+    });
+    
+    
+    //closebutton for displays
+    $('.close').on("click",function(){
+        $('.close').parent().css('display','none');
+    });
 });
 
 }());
