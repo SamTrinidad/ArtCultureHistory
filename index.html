@@ -48,16 +48,26 @@
         </article>
         <div id="ch2" class="spacer"></div>
         <article>
-            <h1>Who are Indigenous People?</h1>
+            <h1>The Indigenous People</h1>
             <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <h2>What is Indigenous Identity? How is it determined?</h2>
+            <p>
+Identity can consist of culture, languages, and history.  How you present yourself and how others perceive you can determine identity; identity can also be grouped to where you are or where you come from ex. race, class, education, religion. <br><br>
+Colonial domination controlled the Indigenous population through the native communities, bands and tribes.  To be considered “Indian with status” you need to be enrolled with your band but legally, the government decides whether or not you have “Indian status” once the following requirements are met<br><br>
+           If an Indigenous person is recognized as being Indigenous by other Indigenous persons (bands, clans), they can be considered Indigenous. Often times there is a stronger connection to their cultural identity through their traditions and spiritual beliefs. Those that live in a community and are very close to their traditional roots would have no problem explaining what their identity is. They can refer to themselves as being part of a band or clan, or as Indians, Natives, Native Americans, Indigenous people, or First Nations people.
+
             </p>
     
-            <button id="showPopGraph">Population</button>
+            <button id="showPopGraph">Population</button><button id="showAgeGraph">Age Distribution</button>
 
             <div id="popGraphContainer" class="graphContainer">
                 <button class="close">close</button>
                 <canvas id="popGraph" width="500" height="500" class="graph"></canvas>
+            </div>
+            
+            <div id="ageGraphContainer" class="graphContainer">
+                <button class="close">close</button>
+                <canvas id="ageGraph" width="500" height="500" class="graph"></canvas>
             </div>
             <br><br>
             <div id="img1"></div>
@@ -67,17 +77,17 @@
             <h1>Modern Indigenous Issues</h1>
             <hr>
             <h2>Residential Schools and After Effects</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p><a href="http://www.cbc.ca/missingandmurdered/mmiw/profiles/jennifer-leigh-catcheway" target="_blank">Jennifer Catcheway</a>, a 17 year old that went missing just shy of her 18th birthday, has been missing since 2008.  A few days had passed before Bernice Catcheway, Jennifer’s mom, went to the Winnipeg Police Station to report that Jennifer was missing, the constable racially profiled and assumed Jennifer was probably drunk somewhere and would show up; completely disregarding the matter at hand. The police did not take Catcheway seriously, nor did they take statements from the other family members. This particular case is not unique, racism is a problem among the growing rate of missing and murdered Indigenous cases in Manitoba. This article is one of the many instances where Indigenous people are not taken seriously and are racially profiled.</p>
             <div class="showImage">
                 <button class="displayImage">Residential School Photos</button>
                 <div class="imgContainer">
                     <button class="close">close</button>
-                    <img src="img/res1.jpg" class="unselected" id="selected">
-                    <img src="img/res2.jpg" class="unselected">
-                    <img src="img/res3.jpg" class="unselected">
-                    <img src="img/res4.jpg" class="unselected">
-                    <button class="left">&lt;-</button>
-                    <button class="right">-&gt;</button>
+                    <img src="img/res1.jpg" class="unselected resImg" id="selected" alt="">
+                    <img src="img/res2.jpg" class="unselected resImg">
+                    <img src="img/res3.jpg" class="unselected resImg">
+                    <img src="img/res4.jpg" class="unselected resImg">
+                    <button class="left res">&lt;-</button>
+                    <button class="right res">-&gt;</button>
                 </div>
             </div>
             <h2>Loss of Culture</h2>
@@ -104,20 +114,15 @@
         </article>
     </section>
     
-<!--    GRAAAAPH!!!SSSDF FSFSFS-->
-    <!-- 
-        <div id="ch3" class="spacer"></div>
-        <article>
-            <h1>Population Graph</h1>
-            <hr>
-            <p>Here is a Graph of residency in Canada of total Aboriginal Identity.</p>
+<!--    Image Backgrounds     -->
 
-            <canvas id="popGraph" width="500" height="500" class="graph"></canvas>
-        </article>
--->
-        
-        
-<!--        <div id="ch4" class="spacer"></div>-->
+<img class="imgBg" src="edited/pot.png" id="pot">
+<img class="imgBg" src="edited/adena1.png" id="adena1">
+<img class="imgBg" src="edited/adena2.png" id="adena2">
+<img class="imgBg" src="edited/adena3.png" id="adena3">
+
+  
+
 <!--
         <article>
             <h1>Age Distribution in Families</h1>

@@ -120,7 +120,7 @@ var population = {
 var gcreated = false;
 var acreated = false;
 
-function createeageGraph(){
+function createageGraph(){
     acreated = true;
     var ctx = document.getElementById('ageGraph');
     var barChart = new Chart(ctx,{
@@ -306,16 +306,54 @@ $(window).ready(function(){
             createpopGraph();
         }
     });
+    $('#showAgeGraph').on("click",function(){
+        $('#ageGraphContainer').css('display','block');
+        if(acreated === false){
+            createageGraph();
+        }
+    });
     
     //image slides
     $('.displayImage').on("click",function(){
         this.parentNode.lastElementChild.style.display = "block";
     });
+    
     $('.right').on("click",function(){
-        
+        var img = this.classList[1];
+        var imgList = document.getElementsByClassName(img+"Img");
+        var cur = document.getElementById('selected');
+        var len = imgList.length;
+        for(var i = 0;i<len;i++){
+            if(i == len-1){
+                imgList[0].id ="selected";
+                imgList[i].id = "";
+                break;
+            }
+            if(cur==(imgList[i])){
+                imgList[i+1].id = "selected";
+                imgList[i].id = "";
+                break;
+            }
+        }
     });
+    
     $('.left').on("click",function(){
-        
+        var img = this.classList[1];
+        var imgList = document.getElementsByClassName(img+"Img");
+        var cur = document.getElementById('selected');
+        var len = imgList.length;
+        for(var i = len-1;i>=0;i--){
+            if(i == 0){
+                imgList[len-1].id ="selected";
+                imgList[0].id = "";
+                break;
+            }
+            if(cur==(imgList[i])){
+                imgList[i-1].id = "selected";
+                imgList[i].id = "";
+                break;
+            }
+        }
     });
     
     
