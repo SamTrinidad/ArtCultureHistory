@@ -66,11 +66,15 @@ nav {
 #content{
     top: 400px;
     position:relative;
-    font-family: monospace;
+    font-family: helvetica, arial;
     text-align: left;
     margin: auto;
     width:70%;
     font-size: 20px;
+    
+    
+    
+
 }
 
 #content h1{
@@ -83,10 +87,18 @@ nav {
     height:100px;
 }
 
+#bgRocks{
+    position: absolute;
+    opacity: 1;
+    background-image: url("./edited/bgrocks.png");
+    background-size: 100%;
+    background-repeat: repeat;
+}
 
 body{
     margin: 0;
     background-color: #996633;
+    
 }
 
 hr{
@@ -167,7 +179,7 @@ hr{
 
 
 /* Chapters */
-p a{
+a{
     color: #FF8800;
     text-decoration: underline;
 }
@@ -184,12 +196,18 @@ p a{
     height: 500px;
     width: 100%;
 }
+.paraphrase{
+    font-size: 20px;
+    margin: 0px 40px;
+    font-style: italic;
+}
+
 
 
 /* Chapter 2*/
 #img2{
-    background-image: url("./edited/grouppic.png");
-    background-size: auto 100%;
+    background-image: url("./edited/grouppic.jpeg");
+    background-size: 80% 100%;
     background-position: center 200px ;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -198,35 +216,40 @@ p a{
     width: 100%;
 }
 
-#put{
+#putName{
     position:relative;
     height: 400px;
-    width: 100%;
+    width: 100%;    
 }
+.gName{
+    color: white;
+    font-weight: bolder;  
+}
+
 #Sam{
     position: absolute;
     top: 40px;
-    left: 45%;
+    left: 90%;
 }
 #Chloe{
     position: absolute;
-    top: 150px;
-    left: 0%;
+    top: 40px;
+    left: 50%;
 }
 #Azim{
     position: absolute;
-    top: 120px;
-    left: 25%;
+    top: 40px;
+    left: 70%;
 }
 #Teara{
     position: absolute;
-    top: 150px;
-    left: 86%;
+    top: 40px;
+    left: 20%;
 }
 #Dana{
     position: absolute;
-    top: 200px;
-    left: 72%;
+    top: 40px;
+    left: 35%;
 }
 
 
@@ -283,6 +306,9 @@ button{
     box-shadow: 10px 10px rgba(0,0,0,0.5);
     overflow: hidden;
 }
+.showImage{
+    display: inline-block;
+}
 .left{
     position: inherit;
     margin: auto;
@@ -307,6 +333,8 @@ button{
 }
 
 
+
+/*ground pics*/
 .imgBg{
     position: absolute;
     width: 14%;
@@ -317,16 +345,34 @@ button{
 }
 #adena1{
     left: 5px;
-    top: 2000px;
+    top: 2050px;
     transform: rotate(10deg);
 }
 #adena2{
     right: 5px;
-    top: 3000px;
+    top: 3100px;
 }
 #adena3{
     left: 50px;
     top: 3600px;
     width: 10%;
     transform: rotate(40deg);
+}
+#woodland1{
+    right: 0px;
+    top: 2600px;
+}
+#woodland2{
+    left:5px;
+    top: 4500px;
+    transform: rotate(-30deg);
+}
+#hopewell1{
+    right: 5px;
+    top: 4000px;
+}
+#hopewell2{
+    left: 0px;
+    top: 3000px;
+    transform: rotate(290deg);
 }

@@ -37,6 +37,7 @@ var group = {
             }
         }
         var put = document.createElement('div');
+        put.className = "gName";
         put.innerHTML = list;
 
         $('#img2').append(put);
@@ -316,6 +317,7 @@ $(window).ready(function(){
     //image slides
     $('.displayImage').on("click",function(){
         this.parentNode.lastElementChild.style.display = "block";
+        this.parentNode.lastElementChild.firstElementChild.id = "selected";
     });
     
     $('.right').on("click",function(){
@@ -323,15 +325,19 @@ $(window).ready(function(){
         var imgList = document.getElementsByClassName(img+"Img");
         var cur = document.getElementById('selected');
         var len = imgList.length;
-        for(var i = 0;i<len;i++){
-            if(i == len-1){
+        var i = 0;
+        for(i = 0;i<len;i++){
+ 
+            if(i === len-1){
+
                 imgList[0].id ="selected";
                 imgList[i].id = "";
                 break;
             }
-            if(cur==(imgList[i])){
+            if(cur===(imgList[i])){
                 imgList[i+1].id = "selected";
                 imgList[i].id = "";
+
                 break;
             }
         }
@@ -342,8 +348,10 @@ $(window).ready(function(){
         var imgList = document.getElementsByClassName(img+"Img");
         var cur = document.getElementById('selected');
         var len = imgList.length;
-        for(var i = len-1;i>=0;i--){
+        var i = 0 ;
+        for(i = len-1;i>=0;i--){
             if(i == 0){
+
                 imgList[len-1].id ="selected";
                 imgList[0].id = "";
                 break;
@@ -351,6 +359,7 @@ $(window).ready(function(){
             if(cur==(imgList[i])){
                 imgList[i-1].id = "selected";
                 imgList[i].id = "";
+
                 break;
             }
         }
@@ -360,6 +369,8 @@ $(window).ready(function(){
     //closebutton for displays
     $('.close').on("click",function(){
         $('.close').parent().css('display','none');
+        var sel = document.getElementById('selected');
+        sel.id ="";
     });
 });
 
