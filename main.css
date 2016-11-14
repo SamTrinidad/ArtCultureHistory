@@ -229,27 +229,27 @@ a{
 #Sam{
     position: absolute;
     top: 40px;
-    left: 90%;
+    left: 92%;
 }
 #Chloe{
     position: absolute;
     top: 40px;
-    left: 50%;
+    left: 52%;
 }
 #Azim{
     position: absolute;
     top: 40px;
-    left: 70%;
+    left: 72%;
 }
 #Teara{
     position: absolute;
     top: 40px;
-    left: 20%;
+    left: 22%;
 }
 #Dana{
     position: absolute;
     top: 40px;
-    left: 35%;
+    left: 37%;
 }
 
 
@@ -330,6 +330,14 @@ button{
 }
 #selected{
     display:block;
+}
+.alt{
+    z-index: 10;
+    width:100%;
+    position:absolute;
+    bottom:2px;
+    left: auto;
+    background-color: rgba(255,255,255,0.8);
 }
 
 
